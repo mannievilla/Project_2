@@ -1,6 +1,6 @@
 create Table population(
 	geographic_area Varchar(100),
-	census Varchar(100),
+	census INt,
 	estimates_base Int,
 	year_2010 INT,
 	year_2011 Int,
