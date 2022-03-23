@@ -1,5 +1,6 @@
 create Table population(
-	geographic_area Varchar(100),
+	city varchar(100),
+	state Varchar(100),
 	census INt,
 	estimates_base Int,
 	year_2010 INT,
@@ -11,7 +12,10 @@ create Table population(
 	year_2016 Int,
 	year_2017 Int,
 	year_2018 Int,
-	year_2019 Int
+	year_2019 Int,
+	id serial primary key not null
 	);
 	
 Drop TAble population; 
+
+select * from Population
