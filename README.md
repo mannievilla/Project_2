@@ -28,12 +28,26 @@ Step 1 Extract:
 3. Downloaded SUB-IP/population CSV from census.gov website. 
 
 Step 2 Transform: 
-1.	Avocado sales CSV: Formatted dates from YYYY-MM-DD to MM/DD/YYYY. Removed ###### values from date column. Formatted text and numbers. Removed bag (Total Bags/Small Bags/Large Bags/XLarge Bags) columns. Removed commas from region column. 
+1.	Avocado sales CSV: 
+	- Formatted dates from YYYY-MM-DD to MM/DD/YYYY. 
+	- Removed ###### values from date column. 
+	- Formatted text and numbers. 
+	- Removed bag (Total Bags/Small Bags/Large Bags/XLarge Bags) columns. 
+	- Removed commas from region column. 
+	- Removed non-city data from region.
+	- Formatted columns names to be lower case.
+	
+2.	simplemaps: 
+	- Removed all columns except for zip, city, and state_name.
+	- Added city ID.
 
-2.	simplemaps
-3.	SUB-IP: renamed to "population". 
+3.	SUB-IP:
+	- Renamed to "population" and imported into a Pandas data frame. 
+	- Split city_state column into separate city and state columns.
+	- Added city ID. 
 
 Step 3 Load:
-After extracting and transforming the data, we were left with three data frames: population with city populations from 2015 to 2018, a junction uszips table with zip codes, cities, and state names, and the avocado table with weekly sales, date, average price, total volume and year. These databases were loaded into MongoDB. Include reason for using 
+After extracting and transforming the data, we were left with three data frames, the population with city populations, a junction uszips table with zip codes, cities, and state names, and the avocado table with weekly sales, date, average price, total volume and year. These databases were loaded into SQL primarily because of the structure of the data and how easily queries could be run. Joins could be made between any of the tables to show information such as how many sales were made in a certain city in a certain year or seeing the population compared to total volume to help with advertising.  
 
 Queries
+
