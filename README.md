@@ -5,7 +5,7 @@ Avocados around the US!
 ## Proposal
 As new employees for the Hass Avocado company, we have been tasked with creating a database to help the advertising and sales team find out who (besides Millenials) are buying their avocados and where. The avocado toast trend is stronger than ever and it's up to us to help detangle all of this data. Our final database is meant to be used to help track avocado sales weekly, by region, city, state, or zip code.
 
-Roles
+## Roles
 Miguel: Loading
 Johnathan: Transform
 Marquetta: ERD and ReadMe
