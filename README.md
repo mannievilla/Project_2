@@ -48,5 +48,11 @@ Step 2 Transform:
 	queries easier. 
 
 Step 3 Load:
-After extracting and transforming the data, we were left with three data frames, the population with city populations, a junction uszips table with zip codes, cities, and state names, and the avocado table with weekly sales, date, average price, total volume and year. These databases were loaded into SQL primarily because of the structure of the data and how easily queries could be run. Joins could be made between any of the tables to show information such as how many sales were made in a certain city in a certain year or seeing the population compared to total volume to help with advertising and research.
+After extracting and transforming the data, we were left with two data frames, the population with city populations, and the avocado table with weekly sales, date, average price, total volume and year. These databases were loaded into SQL primarily because of the structure of the data and how easily queries could be run. Joins could be made between any of the tables to show information such as how many sales were made in a certain city in a certain year or seeing the population compared to total volume to help with advertising and research.
+
+## **Schema**
+
+We created our Entity Relationship Database using Quick DBD
+
+![erd](https://github.com/mannievilla/Project_2/blob/main/QuickDBD-Project%202.png)
 
