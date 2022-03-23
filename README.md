@@ -13,8 +13,7 @@ Manny: Transform
 
 Sources:
 1. Weekly Avocado Sales from 2015-2018: https://www.kaggle.com/datasets/neuromusic/avocado-prices
-2. Zip Code info: https://simplemaps.com/data/us-zips (Johnathan)
-3. Census info: https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html 
+2. Census info: https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html 
 
 The Process
 **E**xtract: your original data sources and how the data was formatted (CSV, JSON, pgAdmin 4, etc).
@@ -24,11 +23,11 @@ The Process
 
 Step 1 Extract:
 1. Downloaded avocado sales CSV file from Kaggle and converted it into a data frame. Fixed dates and removed zeroes. Formatted text and numbers.
-2. Downloaded USzips CSV from simplemaps.com website. 
-3. Downloaded SUB-IP/population CSV from census.gov website. 
+2. Downloaded SUB-IP/population CSV from census.gov website. 
 
 Step 2 Transform: 
 1.	Avocado sales CSV: 
+	- Imported into Jupyter Notebook.
 	- Formatted dates from YYYY-MM-DD to MM/DD/YYYY. 
 	- Removed ###### values from date column. 
 	- Formatted text and numbers. 
@@ -37,17 +36,16 @@ Step 2 Transform:
 	- Removed non-city data from region.
 	- Formatted columns names to be lower case.
 	
-2.	simplemaps: 
-	- Removed all columns except for zip, city, and state_name.
-	- Added city ID.
-
-3.	SUB-IP:
-	- Renamed to "population" and imported into a Pandas data frame. 
+2.	SUB-IP-EST2019-ANNRES:
+	- Renamed to "population" and imported into Jupyter Notebook. 
 	- Split city_state column into separate city and state columns.
 	- Added city ID. 
 
+3.	Junction Table
+	- Created new "cities" table using the 'city' and 'state' columns from the population table to use as the IDs. Matched cities from the "cities" table to the "avocado" table to make 
+	queries easier. 
+
 Step 3 Load:
-After extracting and transforming the data, we were left with three data frames, the population with city populations, a junction uszips table with zip codes, cities, and state names, and the avocado table with weekly sales, date, average price, total volume and year. These databases were loaded into SQL primarily because of the structure of the data and how easily queries could be run. Joins could be made between any of the tables to show information such as how many sales were made in a certain city in a certain year or seeing the population compared to total volume to help with advertising.  
+After extracting and transforming the data, we were left with three data frames, the population with city populations, a junction uszips table with zip codes, cities, and state names, and the avocado table with weekly sales, date, average price, total volume and year. These databases were loaded into SQL primarily because of the structure of the data and how easily queries could be run. Joins could be made between any of the tables to show information such as how many sales were made in a certain city in a certain year or seeing the population compared to total volume to help with advertising and research.
 
 Queries
-
