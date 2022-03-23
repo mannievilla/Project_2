@@ -57,3 +57,8 @@ We created our Entity Relationship Database using Quick DBD
 
 ![erd](https://github.com/mannievilla/Project_2/blob/main/QuickDBD-Project%202.png)
 
+## Sample Queries
+
+To show the user that you can quickly search through the database for avocado info, by showing a couple queries to show our relational database.
+
+![query1]()
