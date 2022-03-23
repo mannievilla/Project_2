@@ -38,6 +38,8 @@ Step 2 Transform:
 	
 2.	SUB-IP-EST2019-ANNRES:
 	- Renamed to "population" and imported into Jupyter Notebook. 
+	- Removed "Unnamed: 0" column.
+	- 
 	- Split city_state column into separate city and state columns.
 	- Added city ID. 
 
@@ -48,4 +50,3 @@ Step 2 Transform:
 Step 3 Load:
 After extracting and transforming the data, we were left with three data frames, the population with city populations, a junction uszips table with zip codes, cities, and state names, and the avocado table with weekly sales, date, average price, total volume and year. These databases were loaded into SQL primarily because of the structure of the data and how easily queries could be run. Joins could be made between any of the tables to show information such as how many sales were made in a certain city in a certain year or seeing the population compared to total volume to help with advertising and research.
 
-Queries
